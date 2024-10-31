@@ -1,0 +1,22 @@
+name: 
+channels:
+  - anaconda
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bbmap=39.01=h92535d8_1
+  - bcftools=1.17=h3cc50cf_1
+  - bedtools=2.31.0=hf5e1c6e_2
+  - bwa=0.7.17=he4a0461_11
+  - cutadapt=4.4=py310h4b81fae_1
+  - fastqc=0.12.1=hdfd78af_0
+  - filtlong=0.2.1=hdcf5f25_3
+  - ivar=1.4.2=h0033a41_2
+  - megahit=1.2.9=h43eeafb_4
+  - minimap2=2.26=he4a0461_1
+  - multiqc=1.14=pyhdfd78af_0
+  - qualimap=2.2.2a=1
+  - samtools=1.17=hd87286a_1
+  - seqtk=1.4=h7132678_0
+  - trim-galore=0.6.10=hdfd78af_0
