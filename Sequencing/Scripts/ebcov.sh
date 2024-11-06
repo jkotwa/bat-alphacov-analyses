@@ -1,7 +1,7 @@
 #!/bin/bash
 #source conda to activate conda env
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate bat-alpha-cov
+conda activate bat-alphacov-analyses
 
 n=0
 while getopts ":n:" option; do
