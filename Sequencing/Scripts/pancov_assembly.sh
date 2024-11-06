@@ -1,7 +1,7 @@
 #!/bin/bash
 #source conda to activate conda env
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate mpox
+conda activate bat-alphacov-analyses
 
 n=0
 while getopts ":n:" option; do
@@ -146,8 +146,6 @@ awk 'BEGIN{ OFS=FS="@" }{ sub(/Severe acute respiratory syndrome coronavirus 2 g
 
 sed -i '1iSampleID_BestRef@BlastMatchID@Blast_Match_Name@ %_ID@Length@%Qcov@Mismatch@E-value' ./results/top_blast_hits.csv
 
-
-conda activate pancov
 parallel --colsep "," \
 "cat ./results/{2}_{1}_bamqc/genome_results.txt |\
 sed -n '/^>>>>>>> Globals.*/,/std coverage.*/{/^>/d;/There/d;/^$/d;s/^[ \t]*//;s/ = /;/g;p;}' |\
